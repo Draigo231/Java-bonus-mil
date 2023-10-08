@@ -15,9 +15,9 @@ public class Main {
         int amount = 13_676; // стоимость билета
         boolean isRegistered = true;
 
-        int bonusMiles;
+        int bonusMiles; // кол-во бонусов, если пользователь авторизирован 
         if (isRegistered) {
-            bonusMiles = 20;
+            bonusMiles = 20; 
         } else {
             bonusMiles = 0;
         }
