@@ -7,22 +7,22 @@ public class Main {
         // параметров программы: одну для хранения
         // стоимости билета, другую для хранения количества
         // рублей для одной бонусной мили
-
         // Рассчитываете количество бонусных миль, используя
         // значения заведённых переменных. Ответ сохраняете в
         // новую переменную и выводите на экран
 
         int amount = 13_676; // стоимость билета
-        boolean isRegistered = true;
 
-        int bonusMiles; // кол-во бонусов, если пользователь авторизирован 
-        if (isRegistered) {
-            bonusMiles = 20; 
+        int bonusMiles; // кол-во бонусов при соблюдении условий автоперевозчика
+        int bonusDivider = 20; // делитель для расчёта бонуса
+
+        if (amount > bonusDivider) {
+            bonusMiles = amount * 1 / bonusDivider;
         } else {
             bonusMiles = 0;
         }
 
-        int bonus = amount * 1 / bonusMiles;
+        int bonus = bonusMiles;
 
         System.out.println("Общая стоимость билета: " + amount);
         System.out.println("Сумма начисленных бонусов:" + bonus);
